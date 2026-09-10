@@ -804,6 +804,14 @@
             margin-bottom: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             border: 1px solid rgba(255,255,255,0.15);
+            overflow: hidden; /* Прячет все, что выходит за скругленные края */
+        }
+
+        .partner-badge-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Картинка заполнит весь квадрат. Если логотипы обрезаются, замените cover на contain */
+            display: block;
         }
 
         .partner-name {
@@ -1180,7 +1188,9 @@
             </a>
 
             <a href="https://ninsar.games" target="_blank" class="partner-brand-card card-p1">
-                <div class="partner-badge-icon">👾</div>
+                <div class="partner-badge-icon">
+                    <img src="https://habrastorage.org/getpro/moikrug/uploads/company/100/009/843/0/logo/big_12566e5510dd9ab905d684bf57f7eb33.png" alt="^(">
+                </div>
                 <div class="partner-name">Ninsar Games</div>
                 <div class="partner-type">Игровая студия</div>
             </a>
@@ -1192,9 +1202,19 @@
             </a>
 
             <a href="https://bombora.ru" target="_blank" class="partner-brand-card card-p3">
-                <div class="partner-badge-icon">📚</div>
+                <div class="partner-badge-icon">
+                    <img src="https://data.cyclowiki.org/images/7/75/Bombora.png" alt="^(">
+                </div>
                 <div class="partner-name">Bombora</div>
                 <div class="partner-type">Книжное издательство</div>
+            </a>
+
+            <a href="https://t.me/gdevenings" target="_blank" class="partner-brand-card card-p3">
+                <div class="partner-badge-icon">
+                    <img src="https://i.ibb.co/sdrGnyC8/2026-09-10-194341148.png" alt="^(">
+                </div>
+                <div class="partner-name">Gamedev Evenings</div>
+                <div class="partner-type">Сообщество с ивентами мира геймдева</div>
             </a>
 
         </div>
@@ -1352,8 +1372,8 @@
         // Теперь это массив объектов. Для каждого партнера указываем имя и его сайт (домен)
         const infoPartnersData = [
             { name: "ИТМО ШРВ", domain: "itmo.games", link: "https://itmo.games" },
-			{ name: "GameDevPerm", domain: "t.me/GameDevPerm", link: "https://t.me/GameDevPerm" }
-            // Добавь сюда реальных партнеров по такому же шаблону
+			{ name: "GameDevPerm", domain: "t.me/GameDevPerm", link: "https://t.me/GameDevPerm" },
+            { name: "Геймдев Афиша", domain: "https://gamedevafisha.ru", link: "gamedevafisha.ru" }
         ];
 
         infoPartnersData.forEach((partner) => {
